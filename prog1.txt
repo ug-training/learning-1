@@ -1,3 +1,7 @@
 ##this is a sample program##
+<<<<<<< HEAD
 gud prog
 
+=======
+adding some comments
+>>>>>>> 969f9b4e53cc2fd3de448050cd1efe3866d67978
