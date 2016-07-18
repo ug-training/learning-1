@@ -1,1 +1,3 @@
-1.mysql -u root  -to enter into mysql
+1.mysql -u root           -to enter into mysql
+2.create database dbname  -to create a database
+3.crate table t_name      -to create a table
