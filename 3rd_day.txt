@@ -1,0 +1,1 @@
+1.mysql -u root  -to enter into mysql
