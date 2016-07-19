@@ -1,0 +1,17 @@
+database commands
+1.delete from t_name 
+  where (condition)              -to delete a particular record in a table
+2.drop  table t_name             -to delete a table
+3.update t_name                  -to update a table,changing the contents in the table
+ set col_name=" " 
+ where col_name=" "
+4.select a.name,b.name           -to join the tables
+ from t_name a
+ where 
+5.select c_name from t_nam       -to perform regular expressions
+ here c_name regexp 
+6.alter table t_name add         -to alter the contents in the table
+drop,change,modify
+
+7.alter table t_name rename to   -to rename a table
+
