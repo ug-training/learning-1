@@ -1,0 +1,4 @@
+1.mysql -u root           -to enter into mysql
+2.create database dbname  -to create a database
+3.create table t_name     -to create a table
+4.select *from t_name     -select all the contents from the table
