@@ -1,0 +1,18 @@
+##training done on first day##
+linux commands
+ 1.creating a directory                   -mkdir
+ 2.creating a file                        -vi
+ 3.listing of files                       -ls,ls -al
+ 4.copying contents in different ways     -cp
+   for coying from other directory to pwd -cp ../dir_name/filename.txt .
+ 5.cat command                            -cat
+ 6.moving a file/renaming a file          -mv 
+ 7.searching a file                       -find,locate(diff:faster,In locate file will be running in backup)
+ 8.searching the contents in the file     -grep
+ 9.for displaying location of the file    -whereis
+ 10.changing the modes of the file        -chmod 
+                        user-group-public
+                        read-write-execute
+                        4-2-1
+                eg:chmod u-w filename.tt
+ 
