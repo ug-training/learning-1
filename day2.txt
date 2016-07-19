@@ -1,0 +1,9 @@
+##version control system - git commands##
+1.git init               -to create a repository
+2.git clone /url address -to copy
+3.git add filename.txt   -to add files 
+4.git commit             -to commit changes
+5.git status             -to see what changes had taken place r had to be made
+6.git push               -to push the contents to the file
+7.git pull               -to pull the contents from the file
+
