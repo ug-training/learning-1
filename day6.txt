@@ -1,0 +1,23 @@
+
+HTML Commands
+     Creation of table
+
+Tags:
+   
+    <th>                          -heading
+    <tr>                          -row
+    <td>                          -detail
+
+Attributes:
+   
+    By the use of CSS property    
+     
+                                  -changing the border,border collapse,border spacing of table     
+                                  -cell spacing
+                                  -text alignment
+                                  -adding a caption
+                                  -cell colspan,rowspan(merging)
+                                  -special styles by the use of id attribute
+
+id attribute:
+
