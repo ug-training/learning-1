@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Styles attribute</title>
+</head>
+<body style="background-color:pink;">
+
+<h1 style="color:red;">This is a heading</h1>
+<p style="font-family:courier;">This is a paragraph.</p>
+<p style="font-size:300%;">Changed size</p>
+<p style="text-align:right">Right aligned text</p>
+<b>bold text</b>
+<i>italises<small>the</small>text</i>
+<em>emphasized text</em>
+<strong>strong text</strong>
+<p>Text to <del>is</del> be <mark>marked</mark> is <ins>inserted<ins></p>h<sub>2</sub>o.x<sup>3</sup>
+</body>
+</html>
