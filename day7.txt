@@ -1,1 +1,30 @@
-To display button
+HTML and CSS
+
+1.Creation of Button
+     -use  div
+     -border-radius : to make box curved
+     -margin:auto   : equal margins on both sides
+     -create a link with <a> on <div.
+2.Box model
+     
+syntax:
+        *{
+           property:value;
+         }
+
+3.Multiple selectors
+      -use div div p{ p:v; }
+
+4.Branches
+      -to switch to immediate child element : div > p
+ 
+5.Class and Id
+     class  -used for bunch of elements
+     id     -used for single element
+6.Pseudo selectors
+7.CSS positioning
+     *display
+       -block
+       -inline-block
+       -inline
+       -none
