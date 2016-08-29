@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PWD</title>
+<link href="css8/pwd.css" rel="stylesheet" />
+<link href="css8/bootstrap.css" rel="stylesheet" />
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<div class="pwd">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-2"></div>
+			<div class="col-xs-8">
+				<div class="form-group">
+		           <label for="pwd">Password</label><br>
+		           <input type="password" class="form-control" id="pwd" />
+		        </div>
+		    </div>
+		    <div class="col-xs-2"></div>
+	    </div>
+	    <p id="demo"></p>
+	</div>
+	<div class="container" style="margin-bottom:20px;">
+	<div class="box" style="text-align:center;">
+	<strong>Your password must contain at least:</strong>
+	<div class="row">
+	<div class="col-md-1"></div>
+	<div class="col-md-2"><input type="checkbox" id="character"> 8 characters</div>
+    <div class="col-md-2"><input type="checkbox" id="lwrcase"> 1 lowercase Letter</div>
+	<div class="col-md-2"><input type="checkbox" id="uppercase"> 1 uppercase Letter</div>
+	<div class="col-md-2"><input type="checkbox" id="nors"> 1 number or symbol</div>
+	<div class="col-md-1"></div>
+	</div>
+	<div class="row" style="text-align:center;">Do not use #,\,--,or part of ur email address</div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="container">
+	    <div class="row">
+		    <div class="col-xs-2"></div>
+			    <div class="col-xs-8">		
+					<div class="form-group">
+			           <label for="pwd">ConfirmPassword</label><br>
+			           <input type="password" class="form-control" id="conf_pwd" >
+			        </div>
+			    </div>
+		    <div class="col-xs-2 "></div>
+	    </div>	 
+        <p class="btn btn-warning center-block" style="width:150px" id="btn-submit">Set Password            
+    </p> 
+</div>  
+<script>
+$(document).ready(function(){
+	
+	$("input[type='checkbox']").removeAttr("checked");
+
+    $("#pwd").on('keypress', function()
+     {  	
+    	var password = $("#pwd").val();
+    	var confirmpwd = $("#confirm_pwd").val();
+		var lowerletter = /[a-z]/;
+		var upperletter = /[A-Z]/;
+		var number = /[0-9]/;
+		if(password.length === 8 || lowerletter.test(password) || upperletter.test(password) || number.test(password)) 
+        {
+			if((password.length) === 8) 
+			{
+			    $("#character").prop("checked","checked");			  
+			}
+			if(lowerletter.test(password))
+			{
+               $("#lwrcase").prop("checked","checked");               
+			}
+			if(upperletter.test(password))
+			{
+				$("#uppercase").prop("checked","checked");			    
+			}
+			if(number.test(password))
+			{
+				$("#nors").prop("checked","checked");				
+			}				
+		}
+			
+		});
+    $("btn-submit").click(function(){
+    	if(password == confirmpwd)
+    	{
+    		alert("password matched");
+    	}
+    })
+});
+     
+		
+
+</script>
+</body>
+</html>
