@@ -99,20 +99,27 @@ $(document).ready(function(){
    $("#submit").on('click',function()
    {
     
-	    var password = $("#pwd").val();
-	  	var confirmpwd = $("#confirm_pwd").val();
-	   	if(password == confirmpwd)
-	   	{
-	   		$("#correct").show(); 
-	   	}
-	   	else if(password != confirmpwd)
-	   	{
-	   		$("#wrong").show(); 
-	   	}    
-	    else if( $("#pwd").val()='' || $("#confirm_pwd").val()='')
-	    {
-	    $("input[type='checkbox']").removeAttr("checked"); 
-	    } 
+    var password = $("#pwd").val();
+  	var confirmpwd = $("#confirm_pwd").val();
+   	if(password == confirmpwd)
+   	{
+   		$("#correct").show(); 
+   	}
+   	else
+   	{
+   		$("#wrong").show(); 
+   	}
+   });
+    $("#confirm_pwd").on('keyup',function()
+   {    
+    var password = $("#pwd").val();
+  	var confirmpwd = $("#confirm_pwd").val();
+   if(password.length == 0 || confirmpwd.length == 0)
+   {
+   $("input[type='checkbox']").removeAttr("checked"); 
+   $("#wrong").hide(); 
+  $("#correct").hide();
+   } 
    }); 
 }); 	
 
