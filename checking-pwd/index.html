@@ -35,10 +35,10 @@
 					<strong>Your password must contain at least:</strong>
 					<div class="row">
 						<div class="col-md-1"></div>
-						<div class="col-md-2"><input type="checkbox" id="character"> 8 characters</div>
-						<div class="col-md-2"><input type="checkbox" id="lwrcase"> 1 lowercase Letter</div>
-						<div class="col-md-2"><input type="checkbox" id="uprcase"> 1 uppercase Letter</div>
-						<div class="col-md-2"><input type="checkbox" id="nors"> 1 number or symbol</div>
+						<div class="col-md-2"><input class="chkbxq" type="checkbox" id="character"> 8 characters</div>
+						<div class="col-md-2"><input class="chkbxq" type="checkbox" id="lwrcase"> 1 lowercase Letter</div>
+						<div class="col-md-2"><input class="chkbxq" type="checkbox" id="uprcase"> 1 uppercase Letter</div>
+						<div class="col-md-2"><input class="chkbxq" type="checkbox" id="nors"> 1 number or symbol</div>
 						<div class="col-md-1"></div>
 					</div>
 					<div class="row" style="text-align:center;">
@@ -69,58 +69,73 @@
 $(document).ready(function(){
 	$("#wrong").hide(); 
   $("#correct").hide();
-	$("input[type='checkbox']").removeAttr("checked");	
+	$("input[type='checkbox']").removeAttr("checked");
+	$("input[type='checkbox']").on('click',function(){
+    $(".chkbxq").prop("disabled", true); 
+	});
 	$("#pwd").on('keyup', function() {
   	var password = $("#pwd").val();
   	var confirmpwd = $("#confirm_pwd").val();
 	  var lowerletter = /[a-z]/;
 	  var upperletter = /[A-Z]/;
 	  var number = /[0-9]/;
-			if(password.length === 8 || lowerletter.test(password) || upperletter.test(password) || number.test(password))
+	    
+	    if(password.length >= 8)
 	    {
-				if((password.length) === 8) 
-				{
-				    $("#character").prop("checked","checked");			  
-				}
-				if(lowerletter.test(password))
-				{
-	          $("#lwrcase").prop("checked","checked");               
-				}
-				if(upperletter.test(password))
-				{
-					  $("#uprcase").prop("checked","checked");			    
-				}
-				if(number.test(password))
-				{
-					  $("#nors").prop("checked","checked");				
-				}							
-			}				
-		}); 
+	    	$("#character").prop("checked","checked");
+	    }
+	    else
+	    {
+	    	$("#character").removeAttr("checked");
+	    	$("#wrong").hide(); 
+        $("#correct").hide();
+	    }
+	    if(lowerletter.test(password))
+	    {
+	    	$("#lwrcase").prop("checked","checked");
+	    }
+	    else
+	    {
+	    	$("#lwrcase").removeAttr("checked");
+	    	$("#wrong").hide(); 
+        $("#correct").hide();
+	    }
+	    if(upperletter.test(password))
+			{
+		    $("#uprcase").prop("checked","checked"); 		    
+			}
+      else
+	    {
+	    	$("#uprcase").removeAttr("checked");
+	    	$("#wrong").hide(); 
+        $("#correct").hide();
+	    }
+	    if(number.test(password))
+		 	{
+	 		  $("#nors").prop("checked","checked");				
+			}	
+			else
+			{
+				$("#nors").removeAttr("checked");
+				$("#wrong").hide(); 
+        $("#correct").hide();
+			}	
+		});	     
    $("#submit").on('click',function()
-   {
-    
+   {    
     var password = $("#pwd").val();
   	var confirmpwd = $("#confirm_pwd").val();
    	if(password == confirmpwd)
    	{
    		$("#correct").show(); 
    	}
-   	else
+   	else 
    	{
    		$("#wrong").show(); 
    	}
    });
-    $("#confirm_pwd").on('keyup',function()
-   {    
-    var password = $("#pwd").val();
-  	var confirmpwd = $("#confirm_pwd").val();
-   if(password.length == 0 || confirmpwd.length == 0)
-   {
-   $("input[type='checkbox']").removeAttr("checked"); 
-   $("#wrong").hide(); 
-  $("#correct").hide();
-   } 
-   }); 
+   
+    
 }); 	
 
 </script>
