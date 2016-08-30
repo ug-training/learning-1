@@ -1,0 +1,35 @@
+.pwd
+{
+	margin-top:300px;
+}
+.pwdcond
+{
+	background-color: #cce5f3;
+	height:150px;
+	width:800px;
+	padding:20px;
+}
+.align
+{
+	padding-top: 10px;
+}
+.btn-warning
+{
+	background-color:#ff751a;
+}
+.box
+{
+	background-color: lightblue;
+	width:1140px;
+	height:100px;
+}
+#correct
+{
+	padding-left: 1150px;
+	
+}
+#wrong
+{
+	padding-left: 1150px;
+	
+}
