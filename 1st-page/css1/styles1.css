@@ -1,0 +1,171 @@
+/*navbar starts*/
+.navbar {
+    border-radius: 0;
+}
+
+.navbar-new {
+    background-color: #23BAB5;
+    
+}
+
+.navbar-new .navbar-brand,
+.navbar-new .navbar-brand:hover,
+.navbar-new .navbar-brand:focus {
+    color: #FFF;
+}
+
+.navbar-new .navbar-nav > li > a {
+    color: #FFF;
+}
+
+.navbar-new .navbar-nav > li > a:hover,
+.navbar-new .navbar-nav > li > a:focus {
+    background-color: #0FA6A1;
+}
+
+.navbar-new .navbar-nav > .active > a,
+.navbar-new .navbar-nav > .active > a:hover,
+.navbar-new .navbar-nav > .active > a:focus {
+    color: #FFF;
+    background-color: #0FA6A1;
+}
+
+.navbar-new .navbar-text {
+    color: #FFF;
+}
+
+.navbar-new .navbar-toggle {
+    border-color: #c52d2f;
+}
+/*navbar ends*/
+/*homepage starts*/
+.homepage
+{
+  margin-top:-20px; 
+  background-image: url("/home/trainee-2/1st page/images/bg1.jpeg");
+  width:100%;
+  height:100%;
+  background-repeat:no-repeat;
+  background-size:cover;
+  padding:250px;
+  color:white;
+  text-align:center;
+  font-family:'verdana';
+  font-size: 300px;
+  position:relative;
+}
+#overlay
+{
+	 position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: black;
+   opacity: 0.6;
+}
+/*homepage ends*/
+/* about us starts*/
+.aboutus
+{
+  width:100%;
+ 
+}
+#sidebar{
+   
+    height: 600px;    
+    overflow: hidden;
+}
+#sidebar #scroller{
+    width:100%;
+    height: 615px;
+    padding-bottom: 15px;
+    overflow: scroll; 
+}
+
+
+.side1
+{
+  height:600px;
+  background-color: rgb(35,186,181);
+  text-align:center;
+  font-size: 100px;
+  padding-top:250px;
+  
+}
+.side2
+{
+	padding:20px;
+	overflow-x:scroll;
+}
+.serve
+{
+	width:100%;
+	
+}
+.side3
+{
+  height:600px;
+  text-align:center;
+  font-size: 100px;
+  padding-top:250px;
+  
+}
+#sidebar1{
+   
+    height: 600px;    
+    overflow: hidden;
+}
+#sidebar1 #scroller1{
+    width:100%;
+    height: 615px;
+    padding-bottom: 15px;
+    overflow: scroll; 
+}
+.contactus
+{
+  width:100%;
+  height:500px;
+}
+.grow { transition: all .8s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+.side4
+{
+	 height:600px;
+  text-align:center;
+  font-size: 100px;
+  padding-top:250px;
+  background-color: rgb(35,186,181);
+}
+@media all and (max-width: 360px) {
+
+   .aboutus .side1
+   { 
+   	font-size:67px; 
+   }
+
+}
+@media all and (max-width: 360px) {
+
+   .serve .side3
+   { 
+   	font-size:67px; 
+   }
+
+}
+@media all and (max-width: 360px) {
+
+   .contactus .side4
+   { 
+   	font-size:67px; 
+   }
+
+}
+@media all and (max-width: 360px) {
+
+   .homepage h1
+   { 
+   	margin-left:-170px; 
+   }
+
+}
